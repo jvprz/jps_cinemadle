@@ -7,11 +7,10 @@ import { OAuthService } from 'angular-oauth2-oidc';
   styleUrls: ['./testing.component.css']
 })
 export class TestingComponent {
-
   constructor(private oauthService: OAuthService) {}
 
-  // OAuth testing
   login() {
+    console.log(this.oauthService);
     this.oauthService.initImplicitFlow();
   }
 }
