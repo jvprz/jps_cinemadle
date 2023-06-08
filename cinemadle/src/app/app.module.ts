@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { OAuthModule } from 'angular-oauth2-oidc';
+import { OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
 import { TestingComponent } from './testing/testing.component';
+import { authConfig } from './auth/oauth.config';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { TestingComponent } from './testing/testing.component';
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide:OAuthStorage, useValue: localStorage },
+    { provide: OAuthModuleConfig, useValue: authConfig }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
