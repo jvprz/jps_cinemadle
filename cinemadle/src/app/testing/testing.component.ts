@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { enviroment } from 'src/enviroments/enviroment';
-import { Song } from 'src/Interfaces/song.interface';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-testing',
@@ -9,14 +7,11 @@ import { Song } from 'src/Interfaces/song.interface';
   styleUrls: ['./testing.component.css']
 })
 export class TestingComponent {
-  // Testing
-  clientId = enviroment.spotifyClientId;
-  clientSecret = enviroment.spotifyClientSecret;
 
-  // First song test
-  firstSong!: Song;
+  constructor(private oauthService: OAuthService) {}
 
-  ngOnInit() {
-    const playlistId = '1lirvZ0NgwRwUCQxy9uu3M?si=41851605525544ec';
+  // OAuth testing
+  login() {
+    this.oauthService.initImplicitFlow();
   }
 }
