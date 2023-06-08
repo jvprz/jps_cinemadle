@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
 import { TestingComponent } from './testing/testing.component';
 import { authConfig } from './auth/oauth.config';
+import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestingComponent
+    TestingComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
