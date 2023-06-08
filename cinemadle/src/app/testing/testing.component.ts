@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { enviroment } from 'src/enviroments/enviroment';
 
 @Component({
