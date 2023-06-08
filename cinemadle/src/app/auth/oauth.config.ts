@@ -1,5 +1,5 @@
-import { AuthConfig } from "angular-oauth2-oidc";
-import { credentials } from "src/assets/credentials";
+import { AuthConfig } from 'angular-oauth2-oidc';
+import { credentials } from '../../assets/credentials';
 
 const { spotifyClientId } = credentials;
 
