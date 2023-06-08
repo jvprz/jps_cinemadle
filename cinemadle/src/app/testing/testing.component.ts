@@ -16,4 +16,7 @@ export class TestingComponent {
   // First song test
   firstSong!: Song;
 
+  ngOnInit() {
+    const playlistId = '1lirvZ0NgwRwUCQxy9uu3M?si=41851605525544ec';
+  }
 }
