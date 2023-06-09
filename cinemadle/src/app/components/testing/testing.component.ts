@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OAuthService } from 'angular-oauth2-oidc';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-testing',
@@ -7,10 +7,10 @@ import { OAuthService } from 'angular-oauth2-oidc';
   styleUrls: ['./testing.component.css']
 })
 export class TestingComponent {
-  constructor(private oauthService: OAuthService) {}
+  constructor(private authService: AuthService) {}
 
   login() {
-    console.log(this.oauthService);
-    this.oauthService.initImplicitFlow();
+    const authorizationUrl = this.authService.getAuthorizationUrl();
+    window.location.href = authorizationUrl;
   }
 }

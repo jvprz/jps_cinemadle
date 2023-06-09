@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
+import { OAuthModule, OAuthStorage } from 'angular-oauth2-oidc';
 import { TestingComponent } from './components/testing/testing.component';
-import { authConfig } from './auth/oauth.config';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +19,8 @@ import { authConfig } from './auth/oauth.config';
     OAuthModule.forRoot()
   ],
   providers: [
-    { provide:OAuthStorage, useValue: localStorage },
-    { provide: OAuthModuleConfig, useValue: authConfig }
+    { provide: OAuthStorage, useValue: localStorage },
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
