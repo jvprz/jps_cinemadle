@@ -6,6 +6,8 @@ describe('TestingComponent', () => {
   let component: TestingComponent;
   let fixture: ComponentFixture<TestingComponent>;
 
+  const isLogged = false;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TestingComponent]
