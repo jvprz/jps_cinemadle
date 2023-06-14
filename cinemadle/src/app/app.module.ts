@@ -4,13 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule, OAuthStorage } from 'angular-oauth2-oidc';
-import { TestingComponent } from './components/testing/testing.component';
+import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestingComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
