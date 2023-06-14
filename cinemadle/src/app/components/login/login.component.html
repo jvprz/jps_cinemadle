@@ -1,8 +1,43 @@
 <div class="text-center">
   <div class="container">
     <div class="card bg-dark mt-5">
-      <div class="container">
-        <button class="btn btn-outline-light" (click)="login()"><i class="bi bi-spotify"></i> Iniciar sesión</button>
+      <div class="card-header mt-3 mb-3">
+        <h1 class="text-light mt-2 mb-2 display-1">Cinemadle</h1>
+        <p class="text-light">Here you can guess movie soundtracks.</p>
+      </div>
+      <div class="card-body mt-3 mb-3">
+        <div id="carouselExample" class="carousel slide mt-3 mb-3" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExample" data-slide-to="1"></li>
+            <li data-target="#carouselExample" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active mb-5">
+              <div class="carousel-content">
+                <h3 class="text-success"><i class="bi bi-box-arrow-in-right me-2"></i>Step 1</h3>
+                <p class="text-light">Log in with your spotify account.</p>
+              </div>
+            </div>
+            <div class="carousel-item mb-5">
+              <div class="carousel-content">
+                <h3 class="text-success"><i class="bi bi-headphones me-2"></i>Step 2</h3>
+                <p class="text-light">Listen to the soundtrack that will play.</p>
+              </div>
+            </div>
+            <div class="carousel-item mb-5">
+              <div class="carousel-content">
+                <h3 class="text-success"><i class="bi bi-question-lg me-2"></i>Step 3</h3>
+                <p class="text-light">Try to guess it to win.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer mt-3 mb-3">
+        <div class="container mt-2 mb-2">
+          <button class="btn btn-outline-success" (click)="login()"><i class="bi bi-spotify me-2"></i><span class="text-light">Log In</span></button>
+        </div>
       </div>
     </div>
   </div>
